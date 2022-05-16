@@ -13,8 +13,11 @@ Laravel Documentation
 | `$table->text('description');` | TEXT equivalent to the table |
 | `$table->time('sunrise');` | TIME equivalent to the table |
 
-### Column Modifiers | Required dependencies composer require doctrine/dbal |
-|--------------------|------------------------------------------------------|
+### Column Modifiers 
+=> Required dependencies composer require doctrine/dbal 
+
+| Command | Description |
+| ------- | ----------- |
 | `$table->string('name', 50) ->change();` | Change the size of the coumn |
 | `$table->renameColumn('from','to');` | Renaming columns |
 | `$table->dropColumn('votes')` | Dropping Columns |
