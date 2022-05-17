@@ -11,7 +11,6 @@ Laravel Documentation
 | `$table->longText('description');` | LONGTEXT equivalent to the table |
 | `$table->string('name', 100);` | VARCHAR equivalent with a length |
 | `$table->text('description');` | TEXT equivalent to the table |
-| `$table->time('sunrise');` | TIME equivalent to the table |
 
 ### Column Modifiers 
 #### Required dependencies: composer require doctrine/dbal 
