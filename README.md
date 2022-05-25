@@ -46,7 +46,7 @@ Laravel Documentation
 Query Builder
 =============
 ### Retriving result
-| Command | Description |
+| Description | Query |
 | ------- | ----------- |
 | `Retriving all rows from a table` | DB::table('tbl_name')->get(); |
 | `Retriving a single row` | DB::table('tbl_name')->where('name','typeName')->first(); |
