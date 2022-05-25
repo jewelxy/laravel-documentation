@@ -55,3 +55,11 @@ Query Builder
 | `Retriving a list of column value` | DB::table('tbl_name')->pluck('col_name'); |
 | `Retriving multiple column value` | DB::table('tbl_name')->pluck('title','name'); |
 | `Retriving specific data` | DB::table('students')->where('id','1')->value('name'); |
+
+### Aggregates
+| Command | Description |
+| ------- | ----------- |
+| `Count row number`| DB::table('tbl_name')->count();|
+| `Find max values` | DB::table('tbl_name')->max('col_name');|
+| `Find min values` | DB::table('tbl_name')->min('col_name');|
+| `FInd Average` | DB::table('students')->avg('col_name'); |
