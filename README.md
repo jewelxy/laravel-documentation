@@ -1,5 +1,5 @@
-Laravel Documentation
-=====================
+Migration
+=========
 ### Creating Coloum (Migration)
 
 | Command | Description |
