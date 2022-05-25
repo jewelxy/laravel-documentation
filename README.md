@@ -41,3 +41,17 @@ Laravel Documentation
 | `php artisan migrate:reset` | roll back all of your application's migrations |
 | `php artisan migrate:refresh` | roll back all your migrations and then execute the migrate command |
 | `php artisan migrate:refresh --step=3` | rollback & re-migrate the last three migrations |
+
+
+Query Builder
+=============
+### Retriving result
+| Command | Description |
+| ------- | ----------- |
+| `Retriving all rows from a table` | DB::table('tbl_name')->get(); |
+| `Retriving a single row` | DB::table('tbl_name')->where('name','typeName')->first(); |
+| `Column from a table` | DB::table('tbl_name')->where('name','john')->value('email'); |
+| `show by its id coloum value, use find method` | DB::table('tbl_name')->find(3); |
+| `Retriving a list of column value` | DB::table('tbl_name')->pluck('col_name'); |
+| `Retriving multiple column value` | DB::table('tbl_name')->pluck('title','name'); |
+| `Retriving specific data` | DB::table('students')->where('id','1')->value('name'); |
