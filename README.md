@@ -1,5 +1,5 @@
-Laravel Documentation
-=====================
+Migration
+=========
 ### Creating Coloum (Migration)
 
 | Command | Description |
@@ -46,7 +46,7 @@ Laravel Documentation
 Query Builder
 =============
 ### Retriving result
-| Command | Description |
+| Description | Query |
 | ------- | ----------- |
 | `Retriving all rows from a table` | DB::table('tbl_name')->get(); |
 | `Retriving a single row` | DB::table('tbl_name')->where('name','typeName')->first(); |
@@ -55,6 +55,7 @@ Query Builder
 | `Retriving a list of column value` | DB::table('tbl_name')->pluck('col_name'); |
 | `Retriving multiple column value` | DB::table('tbl_name')->pluck('title','name'); |
 | `Retriving specific data` | DB::table('students')->where('id','1')->value('name'); |
+<<<<<<< HEAD
 
 ### Aggregates
 | Command | Description |
@@ -63,3 +64,5 @@ Query Builder
 | `Find max values` | DB::table('tbl_name')->max('col_name');|
 | `Find min values` | DB::table('tbl_name')->min('col_name');|
 | `FInd Average` | DB::table('students')->avg('col_name'); |
+=======
+>>>>>>> 64766d45980424b04b7288bce1425dd2982e9011
