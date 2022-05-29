@@ -64,3 +64,11 @@ Query Builder
 | `Find min values` | DB::table('tbl_name')->min('col_name');|
 | `FInd Average` | DB::table('students')->avg('col_name'); |
 
+
+### Selects
+| Command | Description |
+| ------- | ----------- |
+| `return distinict result`| DB::table('tbl_name')->distinct()->get();|
+| `select single column` | DB::table('tbl_name')->select('name')->get();|
+| `select multiple column` | DB::table('tbl_name')->select(' ', ' ')->get();|
+
