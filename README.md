@@ -57,7 +57,7 @@ Query Builder
 | `Retriving specific data` | DB::table('students')->where('id','1')->value('name'); |
 
 ### Aggregates
-| Command | Description |
+| Description | Query |
 | ------- | ----------- |
 | `Count row number`| DB::table('tbl_name')->count();|
 | `Find max values` | DB::table('tbl_name')->max('col_name');|
@@ -66,16 +66,30 @@ Query Builder
 
 
 ### Selects
-| Command | Description |
+| Description | Query |
 | ------- | ----------- |
 | `return distinict result`| DB::table('tbl_name')->distinct()->get();|
 | `select single column` | DB::table('tbl_name')->select('name')->get();|
 | `select multiple column` | DB::table('tbl_name')->select(' ', ' ')->get();|
 
 ### Merge
-| Command | Description |
+| Description | Query |
 | ------- | ----------- |
 | 			| $marks = DB::table('exm_marks')->get();|
 | `Join multi result` | $student = DB::table('students')->get();|
 |  			| $makeMerge = $student->merge($marks);|
 
+### Left / Right  join clause
+| Description | Query |
+| ------- | ----------- |
+| `Joining Column` | $resultJoin = DB::table('students')->leftJoin('std_marks','students.roll', '=', 'std_marks.roll')->get();|
+
+### Data insert
+| Description | Query |
+| ------- | ----------- |
+| `Insert new row`| DB::table('students')->insert(
+['name' => 'sumon', 'class' => '20','roll'=>'5' ],
+);|
+| `Insert new row or ignore` | DB::table('students')->insertOrIgnore(
+['name' => 'sumon', 'class' => '20','roll'=>'5' ],
+);|
