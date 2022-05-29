@@ -87,9 +87,5 @@ Query Builder
 ### Data insert
 | Description | Query |
 | ------- | ----------- |
-| `Insert new row`| DB::table('students')->insert(
-['name' => 'sumon', 'class' => '20','roll'=>'5' ],
-);|
-| `Insert new row or ignore` | DB::table('students')->insertOrIgnore(
-['name' => 'sumon', 'class' => '20','roll'=>'5' ],
-);|
+| `Insert new row`| DB::table('students')->insert(['name' => 'sumon', 'class' => '20','roll'=>'5' ]);|
+| `Insert new row or ignore` | DB::table('students')->insertOrIgnore(['name' => 'sumon', 'class' => '20','roll'=>'5' ]);|
