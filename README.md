@@ -72,3 +72,10 @@ Query Builder
 | `select single column` | DB::table('tbl_name')->select('name')->get();|
 | `select multiple column` | DB::table('tbl_name')->select(' ', ' ')->get();|
 
+### Merge
+| Command | Description |
+| ------- | ----------- |
+| 			| $marks = DB::table('exm_marks')->get();|
+| `Join multi result` | $student = DB::table('students')->get();|
+|  			| $makeMerge = $student->merge($marks);|
+
