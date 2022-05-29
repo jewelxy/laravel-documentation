@@ -76,7 +76,7 @@ Query Builder
 | Description | Query |
 | ------- | ----------- |
 | 			| $marks = DB::table('exm_marks')->get();|
-| `Join multi result` | $student = DB::table('students')->get();|
+| Join multi result | $student = DB::table('students')->get();|
 |  			| $makeMerge = $student->merge($marks);|
 
 ### Left / Right  join clause
