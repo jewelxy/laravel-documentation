@@ -147,9 +147,9 @@ Eloquent ORM
 | `select single column` | ModelName::select('name')->get(); |
 | `select multiple column` | ModelName::select(' ', ' ')->get(); |
 
-### Model(Selects)
+### Model(Merge)
 | Description | Query |
 | ------- | ----------- |
-| `Join multi result` | $marks =examMarksModel::get();|
-| `` | $student = studentsModel::get();|
-| `` |  $makeMerge = $student->merge($marks); |
+|  | $marks =examMarksModel::get();|
+|`Join multi result`| $student = studentsModel::get();|
+|  |  $makeMerge = $student->merge($marks); |
