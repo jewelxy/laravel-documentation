@@ -101,3 +101,55 @@ Query Builder
 | Description | Query |
 | ------- | ----------- |
 | `Update data` |DB::table('students')->where('id',1)->update(['name' => 'newName');|
+
+Eloquent ORM
+=============
+### Model Creation
+| Description | Artisan Command |
+| ------- | ----------- |
+| `Model creation command` | php artisan make:model modelName |
+| `With Migration` | php artisan make:model modelName -m |
+| `Extra Classs` | use illuminate\Database\Eloquent\Model; |
+
+### Model Properties
+| Description | Query |
+| ------- | ----------- |
+| `To define table name` | protected $table = 'table name'; |
+| `To define primary column` | protected $primaryKey = 'id'; |
+| `To define increment status` |public $incrementing = false; |
+| `To define primary column data type` |protected $keyTypes = 'string'; |
+| `To define timestamps status` |public $timestamps = false; |
+| `TO define date format` |protected $dateFormat = 'U'; |
+| `To define db connection` |protected $connection = 'connection-name';|
+
+### Model(Retriving result)
+| Description | Query |
+| ------- | ----------- |
+| `Retriving all rows from a table` | ModelName::get(); |
+| `Retriving a single row` | ModelName::where('name','Toha')->first(); |
+| `Column from a table` |ModelName::where('name','john')->value('email'); |
+| `show by its id coloum value, use find method` |ModelName::find(3); |
+| `Retriving a list of column value` |ModelName::pluck('title'); |
+| `Retriving multiple list of column value` |ModelName::pluck('title','name'); |
+
+### Model(Retriving result)
+| Description | Query |
+| ------- | ----------- |
+| `Count row number` | $users = ModelName::count(); |
+| `Find max values` | $price = ModelName::max(' '); |
+| `Find min values` | $price = ModelName::min(' '); |
+| `FInd Average` | $price = ModelName::avg(' '); |
+
+### Model(Selects)
+| Description | Query |
+| ------- | ----------- |
+| `return distinict result` | ModelName::distinct()->get(); |
+| `select single column` | ModelName::select('name')->get(); |
+| `select multiple column` | ModelName::select(' ', ' ')->get(); |
+
+### Model(Selects)
+| Description | Query |
+| ------- | ----------- |
+| `Join multi result` | $marks =examMarksModel::get();|
+| `` | $student = studentsModel::get();|
+| `` |  $makeMerge = $student->merge($marks); |
