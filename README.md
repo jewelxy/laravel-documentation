@@ -88,8 +88,52 @@ Query Builder
 | Description | Query |
 | ------- | ----------- |
 | `Insert new row`| DB::table('students')->insert(
-['name' => 'sumon', 'class' => '20','roll'=>'5' ],
+['name' => 'nameHere', 'class' => '20','roll'=>'5' ],
 );|
 | `Insert new row or ignore` | DB::table('students')->insertOrIgnore(
-['name' => 'sumon', 'class' => '20','roll'=>'5' ],
+['name' => 'nameHere', 'class' => '20','roll'=>'5' ],
 );|
+
+### Model(Delete)
+| Description | Query |
+| ------- | ----------- |
+| `Delete row`| ModelName::where('name','=','nameHere')->delete();|
+| `Dlete all row but not reset autoincrement id` |ModelName::delete();|
+| `Delete all row and reset autoincrement id` |ModelName::turncate();|
+
+### Model(Update)
+| Description | Query |
+| ------- | ----------- |
+| `Update data`| ModelName::
+->where('id',1)
+->update(['name' => 'newName']);|
+
+### Seeder (Required Dependencies ( composer dump-autoload)
+| Description | Query |
+| ------- | ----------- |
+| `Terminal Command`| php artisan make:seeder seederName|
+| `Run Seeder (Execute Seeder)`| php artisan db:seed --class=studentSeeder|
+
+
+### Http Client (Simple get request)
+
+| Description | Link |
+| ------- | ----------- |
+| `Add Http Class`| use Illuminate\Support\Facades\Http;|
+| `$response = Http::get("url ");`|
+| `$response ->body();`|
+| `$response -> json();`|
+| `$response -> status();`|
+| `$response -> ok();`|
+| `$response -> successful();`|
+| `$response -> serverError();`|
+| `$response ->clientError();`|
+| `$response ->header(" Key");`|
+| `$response ->headers();`|
+
+### Http Client (Simple Post)
+
+| Description |  |
+| ------- | ----------- |
+| `$response = Http::post('url',['key' => 'data']);`|
+
