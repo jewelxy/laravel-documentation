@@ -87,7 +87,6 @@ Query Builder
 ### Data insert
 | Description | Query |
 | ------- | ----------- |
-<<<<<<< HEAD
 | `Insert new row`| DB::table('students')->insert(
 ['name' => 'nameHere', 'class' => '20','roll'=>'5' ],
 );|
@@ -137,8 +136,3 @@ Query Builder
 | Description |  |
 | ------- | ----------- |
 | `$response = Http::post('url',['key' => 'data']);`|
-
-=======
-| `Insert new row`| DB::table('students')->insert(['name' => 'sumon', 'class' => '20','roll'=>'5' ]);|
-| `Insert new row or ignore` | DB::table('students')->insertOrIgnore(['name' => 'sumon', 'class' => '20','roll'=>'5' ]);|
->>>>>>> a5ac1271281a362225a00f0578bfe7e81fef36b5
